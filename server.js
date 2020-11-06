@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 
 //define a connection port
-const PORT = 7117;
+const PORT = process.env.PORT || 7117;
 
 //craete and instacne of express
 const app = express();
