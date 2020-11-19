@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //establish connection to our document/db
-mongoose.connect("mongodb://localhost/workout", {
+mongoose.connect(process.env.MONG_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
